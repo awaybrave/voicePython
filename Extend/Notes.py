@@ -106,3 +106,10 @@ PyMODINIT_FUNC initpalindrome2(void){ //init<module_name>
 #compiling it by:
 gcc -I$PYTHON_HOME -I$PYTHON_HOME/include/python2.7 -shared palindrome2.c -o palindrome2.so -L /System/Library/Frameworks/Python.framework/Versions/2.7/lib/ -l python2.7
 #add shared option to tell the complier not to find main function
+
+#From document: Extension modules can call C standard library and system calls, and create self-defined object.
+#There are three global variables that lie in the Python interpreter
+#and indicate the exception. One is sys.exc_type--tells whether an 
+#exception takes place; The second is sys.exc_value -- tells which
+#exception is raised. The third is sys.exc_traceback-- traces the case
+#where the error originates from.
